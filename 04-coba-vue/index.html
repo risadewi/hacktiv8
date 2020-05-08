@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berkenalan dengan vue js</title>
+</head>
+<body>
+    <div class="app">
+        <!-- <h1 v-text="say"></h1>
+        <h1>{{say}}</h1>
+        <h1 v-html="say"></h1> -->
+
+        <!-- <h1 v-if="status == 'indo'" v-html="sayur"></h1>
+        <h1 v-else="status !='indo'" v-html="say"></h1> -->
+
+        <!-- <h1>Hasil penjumlahan {{angka1}} dengan {{angka2}} adalah {{hasil}}</h1>
+        <button v-on:click="penambahan">tambah</button> -->
+
+        <!-- <h1>Konversi nilai</h1>
+        kilometer: <input type="text" v-model="kilometer"> <br>
+        meter: <input type="text" v-model="meter">
+        <hr>
+        hints: <br>
+        <h5>- KM ke M dikali 1000-</h5>
+        <h5>- M ke KM dibagi 1000-</h5> -->
+
+        <!-- <label for="">Tuliskan nama: </label>
+        <input type="text" v-model="nama">
+        <br>
+        {{ nama }} -->
+
+        <!-- <label for="">Tuliskan pengalaman Anda:</label>
+        <textarea v-model="esai" cols="30" rows="10"></textarea>
+        <br>
+        <h5 style="white-space:pre-line ;" >{{esai}}</h5> -->
+
+        <!-- <input type="radio" v-model="pilihanku" value="Ayam"> Ayam
+        <input type="radio" v-model="pilihanku" value="Ikan"> Ikan
+        <br>
+        <h3>{{pilihanku}}</h3> -->
+
+        <!-- <h2>Hobi</h2> <br>
+        <label for="">Berenang</label>
+        <input type="checkbox" v-model="checkbox" value="Berenang">
+        <label for="">Berkemah</label>
+        <input type="checkbox" v-model="checkbox" value="Berkemah">
+        <label for="">Hiking</label>
+        <input type="checkbox" v-model="checkbox" value="Hiking">
+        <br>
+        <h3>{{checkbox}}</h3>
+        <br>
+        <ul>
+            <li v-for="hobiku in checkbox">{{hobiku}}</li>
+        </ul> -->
+
+        <!-- <select v-model="makanan" multiple>
+            <option value="" disabled>Pilihan menu mingguan</option>
+            <option value="Rendang">Rendang</option>
+            <option value="Pempek">Pempek</option>
+            <option value="Nasi Goreng">Nasi Goreng</option>
+        </select>
+        <br>
+        <h2>{{makanan}}</h2>
+        <ul>
+            <li v-for="(menu) in makanan">{{menu}}</li>
+        </ul> -->
+
+        <!-- <div :style="{color: warna}">Warnanya biru</div>
+        <div :style="{fontSize: ukuran+'px'}">Ukuran font besar</div> -->
+
+        <!-- <button v-on:click="rahasia='Button v-on dipilih'"> Pilih v-on</button>
+        <button @click="rahasia = 'Button @click dipilih'"> Pilih @click</button>
+        <button @click="methodAlertRahasia"> Alert by method</button>
+        <br>
+        {{rahasia}} -->
+        <!-- <label for="">Pilihan Minuman</label>
+        <input type="text" v-on:keyup.enter="minuman = 'Pesanan sesuai aplikasi'">
+        <br>
+        <h2>{{minuman}}</h2>
+        <br>
+        <label for="">Menu</label>
+        <input type="text" 
+        @keyup.esc="escKey"
+        @keyup.space="spasiKey"
+        @keyup.up="upKey"
+        @keyup.down="downKey"
+        > -->
+
+        <!-- <ul>
+            <li v-for="kendaraan in kendaraanDarat">{{kendaraan}}</li>
+        </ul>
+        <br>
+        <h1>Tambah kendaraan</h1>
+        <input type="text" v-model="baru">
+        <button @click="tambahKendaraan">Tambah</button>
+        <br>
+        <ul>
+            <li v-for="(kendaraan, index) in kendaraanDarat">
+                <button @click="hapusKendaraan(index)">X</button>
+                {{kendaraan}}
+            </li>
+        </ul> -->
+
+        <!-- <ul>
+            <li v-for="penunggang in pengemudi">{{penunggang}}</li>
+        </ul>
+        <br>
+        <ul>
+            <li v-for="car in kendaraan">
+                {{car.tipe}},
+                {{car.brand}},
+                {{car.warna}}
+            </li>
+        </ul>
+    </div> -->
+
+    <!-- <sambutan></sambutan>
+    <magic-button></magic-button> -->
+    
+    <portofolio v-for="post in posts" :key="post.id" :post="post"></portofolio>
+
+    <!-- CDN vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script>
+        Vue.component("sambutan",{
+            template: `<div>
+                <h1>Selamat Datang</h1><h2>Peserta Seminar</h2></div>
+                `
+        })
+
+        Vue.component("magic-button",{
+            data: function () {
+                return{
+                    ulang:0
+                }
+            },
+            template: "<button v-on:click='ulang++'>Click me {{ulang}}</button>"
+        })
+
+        Vue.component("portofolio",{
+            props: ["post"],
+            template: `
+                <div>
+                    <h3>{{post.judul}}</h3>
+                    <div v-html="post.konten"></div>
+                </div>
+            `
+        })
+        
+        new Vue({
+            el: ".app",
+            data: {
+                say: "<i>Hello world!<i>",
+                sayur: "<h3>Selamat Datang</h3>",
+                status: "indo",
+                angka1: 10,
+                angka2: 40,
+                hasil: "",
+                kilometer: 0,
+                meter: 0,
+                nama: "",
+                esai: "",
+                pilihanku: "",
+                checkbox: [],
+                makanan: [],
+                warna: "aqua",
+                ukuran:30,
+                rahasia:"",
+                minuman:"",
+                kendaraanDarat: ["mobil","sepeda","bus"],
+                baru: "",
+                pengemudi: {
+                    namaDepan: "fauzan",
+                    namaBelakang: "affan",
+                    umur: 17
+                },
+                kendaraan: [
+                    {tipe: "mobil", brand: "Honda", warna: "hitam"},
+                    {tipe: "bus", brand: "Mercedes", warna: "biru"},
+                    {tipe: "truk", brand: "Suzuki", warna: "hijau"}
+                ],
+                posts: [
+                    {id: 1, judul: "Friday", konten: "Its almost friday"},
+                    {id: 2, judul: "Dreams", konten: "Things that always unreal"}
+                ]
+
+            },
+            computed: {
+                penjumlahan: function () {
+                    return this.angka1 + this.angka2
+                }
+            },
+            methods: {
+                penambahan: function () {
+                    return this.hasil = this.angka1 + this.angka2
+                    
+                },
+                methodAlertRahasia: function(){
+                    alert("Alert")
+                },
+                escKey: function () {
+                    this.minuman = "Haus kok milih esc?"
+                },
+                spasiKey: function () {
+                    this.minuman = "Haus kok milih spasi?"
+                },
+                upKey: function () {
+                    this.minuman = "Haus kok milih atas?"
+                },
+                downKey: function () {
+                    this.minuman = "Haus kok milih bawah?"
+                },
+                hapusKendaraan: function (index) {
+                    this.kendaraanDarat.splice(index,1)
+                },
+                tambahKendaraan: function () {
+                    this.kendaraanDarat.push(this.baru)
+                    this.baru=""
+                }
+            },
+            watch: {
+                kilometer: function(val){
+                    this.kilometer = val
+                    this.meter = val * 1000
+                },
+                meter: function(val) {
+                    this.meter=val
+                    this.kilometer= val /1000
+                }
+            },
+        })
+    </script>
+</body>
+</html>

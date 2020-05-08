@@ -1,22 +1,221 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 
-    <title>Travel Guide Website Template</title>
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
+    <title>Travel Guide</title>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="menu navbar" id="navbar">
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="about.html">About Us</a>
+                </li>
+            </ul>
+
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <input disabled class="form-control mr-sm-2" type="text" placeholder="Total Price: 0" aria-label="Total"
+                    id="total-price">
+            </form>
+        </nav>
+
+        <header>
+            <h1 class="judul">My Travel Guide</h1>
+        </header>
+
+        <div class="card-deck">
+            <div class="card">
+                <img class="card-img-top" src="image/jam-gadang-bukittinggi.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Jam Gadang Bukittinggi</h5>
+                    <p class="card-text">Landmark in Bukittinggi, West Sumatra Indonesia <br></br> Jam Gadang
+                        (Minangkabau for "Big Clock") is a clock tower and major landmark and tourist attraction in the
+                        city of Bukittinggi, West Sumatra, Indonesia. It is located in the centre of the city, near the
+                        main market, Pasar Ateh. It has large clocks on each face.</p>
+                </div>
+                <div class="card-footer">
+                    <span>Total Expense: 4000</span>
+                    <div class="card-button">
+                        <button type="button" class="btn btn-secondary" id="card-1-see-more" data-toggle="modal"
+                            data-target="#card-1-modal">
+                            See More
+                        </button>
+                        <button class="btn btn-primary" id="card-1-add-wishlist">Add to Wishlist</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="image/jakabaring-palembang.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Jakabaring Sport City</h5>
+                    <p class="card-text">Jakabaring Sport City (sic), also known as Jakabaring Sports Complex
+                        (Indonesian: Kompleks Olahraga Jakabaring) is an integrated sports facility complex in
+                        Palembang, South Sumatra, Indonesia. The complex is located 5 kilometers southeast of Palembang
+                        city center, across the Musi river by the Ampera Bridge in Jakabaring, Seberang Ulu I area.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <span>Total Expense: 2000</span>
+                    <div class="card-button">
+                        <button class="btn btn-secondary" id="card-2-see-more" data-toggle="modal"
+                            data-target="#card-2-modal">See More</button>
+                        <button class="btn btn-primary" id="card-2-add-wishlist">Add to Wishlist</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="image/mount_kerinci.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Kerinci Mountain</h5>
+                    <p class="card-text">Mount Kerinci (also spelled Kerintji, among several other ways, and referred to
+                        as Gunung Kerinci, Gadang, Berapi Kurinci, Kerinchi, Korinci/Korintji, or Peak of
+                        Indrapura/Indrapoera) is a volcano in Sumatra island of Indonesia. It is surrounded by the lush
+                        forest of Kerinci Seblat National Park, home to the endangered species of Sumatran tiger and
+                        Sumatran rhinoceros.</p>
+                </div>
+                <div class="card-footer">
+                    <span>Total Expense: 1000</span>
+                    <div class="card-button">
+                        <button class="btn btn-secondary" id="card-3-see-more" data-toggle="modal"
+                            data-target="#card-3-modal">See More</button>
+                        <button class="btn btn-primary" id="card-3-add-wishlist">Add to Wishlist</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="card-1-modal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn btn-secondary" id="card-1-modal-add-wishlist">Add to
+                        Wishlist</button>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-header">
+                    <img class="card-img-top"
+                        src="image/jam-gadang-bukittinggi.jpg"
+                        alt="Generic placeholder image">
+                </div>
+                <div class="modal-body">
+                    <h5 class="modal-title">Jam Gadang Bukittinggi</h5>
+                    <p>Jam Gadang (Minangkabau for "Big Clock") is a clock tower and major landmark and tourist
+                        attraction in the city of Bukittinggi, West Sumatra, Indonesia. It is located in the centre of
+                        the city, near the main market, Pasar Ateh. It has large clocks on each face. <br></br> Jam
+                        Gadang is located in central Bukittinggi, a city in the Minangkabau Highlands of West Sumatra.
+                        It sits in the middle of the Sabai Nan Aluih Park, near the Ateh Market and palace of Mohammad
+                        Hatta.The structure was built in 1926, during the Dutch colonial era, as a gift from Queen
+                        Wilhelmina to the city's controleur.It was designed by architects Yazid Abidin and Sutan Gigi
+                        Ameh, reportedly at a cost of 3,000 guilder.[2]</p>
+                </div>
+                <div class="modal-footer">
+                    <span>Total Expense: 4000</span>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="card-2-modal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn btn-secondary" id="card-2-modal-add-wishlist">Add to
+                        Wishlist</button>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-header">
+                    <img class="card-img-top"
+                        src="image/jakabaring-palembang.jpg"
+                        alt="Generic placeholder image">
+                </div>
+                <div class="modal-body">
+                    <h5 class="modal-title">Jakabaring Sport City</h5>
+                    <p>Jakabaring Sport City (sic), also known as Jakabaring Sports Complex (Indonesian: Kompleks
+                        Olahraga Jakabaring) is an integrated sports facility complex in Palembang, South Sumatra,
+                        Indonesia. The complex is located 5 kilometers southeast of Palembang city center, across the
+                        Musi river by the Ampera Bridge in Jakabaring, Seberang Ulu I area.<br></br>It was the main
+                        venue of the 2011 Southeast Asian Games, the 2013 Islamic Solidarity Games, the 2014 ASEAN
+                        University Games, the 2017 Asian Triathlon Championship and the 2018 Asian Games. Gelora
+                        Sriwijaya Stadium, one of the largest stadiums in Indonesia, is located within this complex.</p>
+                </div>
+                <div class="modal-footer">
+                    <span>Total Expense: 2000</span>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="card-3-modal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn btn-secondary" id="card-3-modal-add-wishlist">Add to
+                        Wishlist</button>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-header">
+                    <img class="card-img-top"
+                        src="image/mount_kerinci.jpg"
+                        alt="Generic placeholder image">
+                </div>
+                <div class="modal-body">
+                    <h5 class="modal-title">Kerinci Mountain</h5>
+                    <p>Mount Kerinci (also spelled Kerintji, among several other ways, and referred to as Gunung
+                        Kerinci, Gadang, Berapi Kurinci, Kerinchi, Korinci/Korintji, or Peak of Indrapura/Indrapoera) is
+                        a volcano in Sumatra island of Indonesia. It is surrounded by the lush forest of Kerinci Seblat
+                        National Park, home to the endangered species of Sumatran tiger and Sumatran
+                        rhinoceros.<br></br> Kerinci can be climbed from the village of Kersik Tuo, 6 or 7 hours away
+                        from Padang by car or bus. The climb and descent normally takes 2 days and 1 night, when
+                        choosing to go all the way to the summit. Climbers may also choose to go up only as far as Camp
+                        2 or 3, skipping the summit attempt, which requires a pre-dawn climb. Kerinci's terrain consists
+                        of thick jungle, and can get muddy and slippery even if there are only mild drizzles, which may
+                        occur occasionally even during the dry season. To climb the volcano a guide is needed, as there
+                        have been rare cases of people disappearing after attempting to trek alone.</p>
+                </div>
+                <div class="modal-footer">
+                    <span>Total Expense: 1000</span>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery, Popper.js, dan Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  </body>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
 </html>

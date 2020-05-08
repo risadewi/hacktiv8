@@ -1,0 +1,105 @@
+@import url(
+  https://fonts.googleapis.com/css?family=Open+Sans:400,
+  800,
+  700,
+  600,
+  300
+);
+
+body {
+  background: #eee;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+hr {
+  border: 0;
+  background: #dedede;
+  height: 1px;
+}
+
+header {
+  text-align: left;
+  color: #232323;
+}
+
+header .deskripsi {
+  font-size: 11pt;
+}
+
+.judul{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.navbar {
+  background-color: black;
+  width: 100%;
+}
+
+.contactUs {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+/* Style the top navigation bar */
+nav .menu {
+    overflow: hidden;
+    max-width: 200px;
+    background-color: coral;
+  }
+nav.menu ul {
+    overflow: hidden;
+    color: #fff;
+    list-style: none;
+    float: left;
+    padding: 0;
+    margin: 0 0 0;
+  }  
+nav.menu ul li {
+  margin: 0;
+  float: left;
+}
+
+nav.menu ul a {
+    padding: 10px;
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+    transition: all 0.5s ease;
+    text-decoration: none;
+  }  
+  /* Change color on hover */
+.menu a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+.search-box{
+    float: right;
+    color: white;
+}
+
+.wishlist{
+    float: right;
+    color: white;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
